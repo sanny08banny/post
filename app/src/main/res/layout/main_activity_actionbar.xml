@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize">
+    <com.google.android.material.search.SearchBar
+        android:layout_width="250dp"
+        android:id="@+id/main_search_view"
+        android:layout_height="wrap_content"
+        android:hint="@string/search_for_transaction"/>
+
+    <ImageButton
+        android:id="@+id/settings_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="6dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/outline_settings_32" />
+
+</RelativeLayout>

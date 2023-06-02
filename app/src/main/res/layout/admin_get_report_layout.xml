@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/get_reports_window"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_margin="16dp"
+    android:background="#009688"
+    android:elevation="10dp"
+    app:cardCornerRadius="16dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#009688">
+
+        <TextView
+            android:id="@+id/get_reports_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="8dp"
+            android:text="@string/what_report_do_you_want"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/close_get_reports_window"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="8dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/baseline_close_28" />
+
+        <RelativeLayout
+            android:id="@+id/get_reports_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/get_reports_title"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/get_reports_datePicker_from"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="@string/pick_from_date" />
+
+            <TextView
+                android:id="@+id/date_from"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/get_reports_datePicker_from"
+                android:layout_margin="8dp"
+                android:textColor="@color/material_dynamic_neutral0"
+                android:textSize="18sp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/get_reports_datePicker_to"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="8dp"
+                android:text="@string/pick_to_date" />
+
+            <TextView
+                android:id="@+id/date_to"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/get_reports_datePicker_to"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="8dp"
+                android:textColor="@color/material_dynamic_neutral0"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/email_editext_getReports"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/date_from"
+                android:layout_margin="16dp"
+                android:background="@drawable/edit_text_no_line"
+                android:hint="@string/enter_an_email"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/full_name_editext_getReports"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/email_editext_getReports"
+                android:layout_margin="16dp"
+                android:background="@drawable/edit_text_no_line"
+                android:hint="@string/enter_a_name" />
+
+            <EditText
+                android:id="@+id/subcounty_editext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/full_name_editext_getReports"
+                android:layout_margin="16dp"
+                android:background="@drawable/edit_text_no_line"
+                android:hint="@string/enter_sub_county_name" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/get_specified_reports_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/subcounty_editext"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="16dp"
+                android:text="@string/get_the_report" />
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
+

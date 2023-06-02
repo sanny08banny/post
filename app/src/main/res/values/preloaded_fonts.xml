@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/abril_fatface</item>
+        <item>@font/amaranth</item>
+        <item>@font/atma_bold</item>
+        <item>@font/autour_one</item>
+        <item>@font/barrio</item>
+        <item>@font/big_shoulders_inline_display_extrabold</item>
+        <item>@font/chau_philomene_one</item>
+        <item>@font/doppio_one</item>
+        <item>@font/flamenco</item>
+        <item>@font/jost_light</item>
+        <item>@font/zilla_slab_highlight</item>
+    </array>
+</resources>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/swipeRefreshMainFragment"
+    android:layout_height="match_parent"
+    tools:context=".MainFragment">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/posts_recycler"
+            android:layout_width="match_parent"
+            tools:listitem="@layout/post_item"
+            android:contentDescription="@string/list_of_all_the_posts_the_cooperation_has_handled"
+            android:layout_height="wrap_content" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                android:gravity="center"
+                android:id="@+id/empty_main_fragment">
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/error_imageButton"
+                        android:background="@android:color/transparent"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/outline_error_outline_48"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Oops something went wrong !\nTry again later"
+                        android:layout_below="@id/error_imageButton"
+                            android:layout_centerHorizontal="true"
+                            android:layout_margin="8dp"
+                            android:gravity="center"
+                            android:fontFamily="@font/jost_light"
+                            android:textStyle="bold"
+                            android:textSize="24sp"/>
+            </RelativeLayout>
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                style="?android:attr/progressBarStyleLarge"
+                android:id="@+id/main_fragment_progressBar"/>
+
+        </FrameLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

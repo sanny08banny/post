@@ -1,0 +1,65 @@
+<resources>
+    <string name="app_name">SamMwangi</string>
+    <string name="base_url_title">http://192.168.153.69:8090</string>
+    <string name="profile">profile</string>
+    <string name="login_here">Login Here</string>
+    <string name="who_s_posting">Who\'s Posting ?</string>
+    <string name="add_profile">Add Profile ?</string>
+    <string name="profile_name">Profile Name</string>
+    <string name="special_profile">Special Profile</string>
+    <string name="made_for_admins_only_for_administration_management">Made for Admins only, for administration management.</string>
+    <string name="enter_name">Enter Name</string>
+    <string name="password">Password ********</string>
+    <string name="enter_email">Enter Email</string>
+    <string name="repeat_password">Repeat Password ********</string>
+    <string name="enter_your_reference_number">Enter Your Reference Number</string>
+    <string name="add_account_details">Add Account Details</string>
+    <string name="account_details">Account Details</string>
+    <string name="enter_amount_you_deposited">Enter amount you deposited</string>
+    <string name="date_description">\"As At: \"</string>
+    <string name="as_at_annotation">"As at: %s "</string>
+    <string name="search_for_transaction">Search for transaction</string>
+    <string name="password_must_contain_an_uppercase_and_number">Password must contain an Uppercase, and number</string>
+    <string name="passwords_do_not_match">Passwords do not match</string>
+    <string name="already_have_an_account">Already have an account ?</string>
+
+    <string name="post_amount_hint">Enter post amount</string>
+    <string name="post_type_prompt">Choose post type</string>
+    <string name="post_type_contribution">Contribution</string>
+    <string name="post_type_new_shares_amount">New Shares</string>
+    <string name="postType">Post type</string>
+    <string name="transactionType">Transaction type</string>
+    <string name="account_settings">Account Settings</string>
+    <string name="datePostedExample">Sun May 07 07:21:37 GMT+03:00 2023</string>
+    <string name="add_summary">Add summary</string>
+    <string name="add_post">Add Post</string>
+    <string-array name="post_type_array">
+        <item>Contribution</item>
+        <item>New shares amount</item>
+    </string-array>
+    <string-array name="transaction_type_array">
+        <item>M-PESA</item>
+        <item>Direct Banking</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="notifications">Notifications</string>
+    <string name="get_reports">Get Reports</string>
+    <string name="what_report_do_you_want">What report do you want ?</string>
+    <string name="enter_an_email">Enter an email</string>
+    <string name="enter_a_name">Enter a name</string>
+    <string name="enter_sub_county_name">Enter Sub-County Name</string>
+    <string name="get_the_report">Get the report</string>
+    <string name="pick_from_date">Pick From Date</string>
+    <string name="pick_to_date">Pick To Date</string>
+    <string name="enter_transaction_id_here">Enter Transaction_Id here</string>
+    <string name="progress_track">Progress Track</string>
+    <string name="outstanding_balance_is">Outstanding balance is:</string>
+    <string name="n_a">N/A</string>
+    <string name="click_on_image_to_change_profile_image">Click on image to change profile image</string>
+    <string name="list_of_all_the_posts_the_cooperation_has_handled">List of all the posts the cooperation has handled</string>
+    <string name="customize_in_profile_amp_more"><![CDATA[Customize in Profile & More]]></string>
+    <string name="channel_name">sam_mwangi</string>
+    <string name="channel_description">Bubbling Notification</string>
+    <string name="balance">Balance: ___</string>
+</resources>
