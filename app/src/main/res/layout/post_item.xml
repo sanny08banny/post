@@ -70,7 +70,7 @@
                 android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
                 android:layout_marginEnd="10dp"
-                android:src="@drawable/baseline_expand_more_24"
+                android:src="@drawable/baseline_keyboard_arrow_down_32"
                 android:background="@android:color/transparent"/>
             </RelativeLayout>
             <RelativeLayout

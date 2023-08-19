@@ -1,71 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:background="#80000000"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".activities.MainActivity">
 
    <com.google.android.material.appbar.AppBarLayout
        android:id="@+id/main_activity_appBar"
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
-       android:background="@android:color/transparent"
-       app:layout_scrollFlags="scroll|snap|exitUntilCollapsed">
-
-      <androidx.appcompat.widget.Toolbar
-          android:id="@+id/main_toolbar"
+       app:layout_behavior="com.google.android.material.appbar.AppBarLayout$Behavior"
+       android:background="@android:color/transparent">
+      <com.google.android.material.appbar.CollapsingToolbarLayout
           android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:background="@android:color/transparent">
-
-         <RelativeLayout
+          android:layout_height="match_parent"
+          android:fitsSystemWindows="true"
+          app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
+          android:id="@+id/admin_report_collapsing_toolbar">
+         <androidx.appcompat.widget.Toolbar
              android:layout_width="match_parent"
+             android:visibility="gone"
              android:layout_height="wrap_content">
+         </androidx.appcompat.widget.Toolbar>
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:orientation="horizontal"
+          android:layout_height="match_parent">
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/funds_summary_card"
-                android:layout_width="300dp"
-                android:layout_height="wrap_content"
-                android:padding="8dp"
-                android:layout_alignParentStart="true"
-                app:cardCornerRadius="8dp">
+         <androidx.cardview.widget.CardView
+             android:id="@+id/funds_summary_card"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:padding="8dp"
+             android:layout_marginVertical="4dp"
+             android:layout_weight="1"
+             app:cardCornerRadius="8dp">
 
-               <RelativeLayout
-                   android:layout_width="match_parent"
-                   android:layout_height="match_parent">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-                  <TextView
-                      android:id="@+id/current_balance"
-                      android:layout_width="wrap_content"
-                      android:layout_height="wrap_content"
-                      android:layout_margin="8dp"
-                      android:text="@string/balance"
-                      android:textColor="@color/white"
-                      android:textSize="18sp"
-                      android:textStyle="bold" />
+               <TextView
+                   android:id="@+id/current_balance"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_margin="8dp"
+                   android:text="@string/balance"
+                   android:textColor="@color/white"
+                   android:textSize="18sp"
+                   android:textStyle="bold" />
 
-                  <TextView
-                      android:id="@+id/current_date"
-                      android:layout_width="wrap_content"
-                      android:layout_height="wrap_content"
-                      android:layout_margin="8dp"
-                     android:layout_below="@id/current_balance"
-                      android:textSize="20sp" />
-               </RelativeLayout>
-            </androidx.cardview.widget.CardView>
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-               android:layout_alignParentEnd="true"
-               android:id="@+id/settings_button"
-               android:src="@drawable/administration_03_white"
-               android:background="@android:color/transparent"
-               android:layout_marginEnd="16dp"
-               android:layout_centerVertical="true"/>
-         </RelativeLayout>
-      </androidx.appcompat.widget.Toolbar>
+               <TextView
+                   android:id="@+id/current_date"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_margin="8dp"
+                   android:layout_below="@id/current_balance"
+                   android:textSize="20sp" />
+            </RelativeLayout>
+         </androidx.cardview.widget.CardView>
+         <ImageButton
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:id="@+id/settings_button"
+             android:layout_gravity="center_vertical"
+             android:src="@drawable/administration_03_white"
+             android:background="@android:color/transparent"
+             android:layout_marginHorizontal="16dp" />
+      </LinearLayout>
+      </com.google.android.material.appbar.CollapsingToolbarLayout>
 
       <com.google.android.material.tabs.TabLayout
           android:id="@+id/main_tabs"
@@ -74,29 +79,24 @@
           android:background="@android:color/transparent"
           android:layout_height="wrap_content"
           app:tabGravity="fill"
+          app:layout_scrollFlags="scroll|enterAlways"
           app:tabIndicatorHeight="0dp"
           app:tabRippleColor="@null"
           android:layout_marginEnd="8dp"
           android:layout_marginStart="8dp"
           app:tabMode="fixed"/>
+
    </com.google.android.material.appbar.AppBarLayout>
    <androidx.viewpager.widget.ViewPager
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
-       android:layout_below="@+id/main_activity_appBar"
+       app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
       android:id="@+id/viewPagerMain"/>
-   <!--   <RelativeLayout-->
-   <!--       android:layout_width="wrap_content"-->
-   <!--       app:layout_constraintBottom_toTopOf="@id/add_post_button"-->
-   <!--       app:layout_constraintEnd_toEndOf="parent"-->
-   <!--       android:layout_margin="8dp"-->
-   <!--       android:padding="8dp"-->
-   <!--       android:layout_height="wrap_content">-->
    <androidx.constraintlayout.widget.ConstraintLayout
        android:layout_width="wrap_content"
-       android:layout_alignParentBottom="true"
-       android:layout_alignParentEnd="true"
+       android:layout_gravity="bottom|end"
        android:layout_marginBottom="24dp"
+       app:layout_behavior="com.google.android.material.behavior.HideBottomViewOnScrollBehavior"
        android:layout_marginEnd="24dp"
        android:layout_height="wrap_content">
 
@@ -112,18 +112,6 @@
        android:src="@drawable/baseline_auto_awesome_motion_24"
        app:fabSize="normal" />
 
-   <TextView
-       android:id="@+id/add_summaries_textView"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:visibility="gone"
-     app:layout_constraintEnd_toStartOf="@+id/add_summaries"
-       app:layout_constraintTop_toTopOf="parent"
-       android:layout_marginTop="16dp"
-       android:layout_marginEnd="16dp"
-       android:elevation="4dp"
-       android:text="@string/add_summary" />
-
    <com.google.android.material.floatingactionbutton.FloatingActionButton
        android:id="@+id/create_post_button_secondary"
        android:layout_width="wrap_content"
@@ -136,17 +124,6 @@
        android:padding="8dp"
        android:src="@drawable/baseline_account_balance_24" />
 
-   <TextView
-       android:id="@+id/create_post_button_secondary_textView"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:visibility="gone"
-      app:layout_constraintEnd_toStartOf="@+id/create_post_button_secondary"
-      app:layout_constraintBottom_toBottomOf="parent"
-       android:layout_marginBottom="139dp"
-       android:layout_marginEnd="16dp"
-       android:text="@string/add_post" />
-
    <com.google.android.material.floatingactionbutton.FloatingActionButton
        android:id="@+id/send_notification"
        android:layout_width="wrap_content"
@@ -158,17 +135,6 @@
        android:layout_marginBottom="28dp"
        android:padding="8dp"
        android:src="@drawable/outline_edit_notifications_24"/>
-
-   <TextView
-       android:id="@+id/send_notification_textView"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       app:layout_constraintBottom_toBottomOf="parent"
-       app:layout_constraintEnd_toStartOf="@+id/send_notification"
-       android:layout_marginEnd="16dp"
-       android:visibility="gone"
-       android:layout_marginBottom="48dp"
-       android:text="Send notification ?" />
 
    <com.google.android.material.floatingactionbutton.FloatingActionButton
        android:id="@+id/cancel_admin_button"
@@ -194,4 +160,4 @@
        android:src="@drawable/ic_baseline_add_24" />
    </androidx.constraintlayout.widget.ConstraintLayout>
 
-</RelativeLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

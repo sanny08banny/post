@@ -1,5 +1,7 @@
 package com.example.sammwangi;
 
+import com.example.sammwangi.DAOs.PostItem;
+
 import java.util.List;
 
 public interface VolleyCallback {

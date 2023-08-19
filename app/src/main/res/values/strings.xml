@@ -1,6 +1,7 @@
 <resources>
-    <string name="app_name">SamMwangi</string>
-    <string name="base_url_title">http://192.168.153.69:8090</string>
+    <string name="app_name">Post</string>
+    <string name="base_url_title2">http://192.168.1.59:5000</string>
+    <string name="base_url_title">http://sanny-tech.af-south-1.elasticbeanstalk.com</string>
     <string name="profile">profile</string>
     <string name="login_here">Login Here</string>
     <string name="who_s_posting">Who\'s Posting ?</string>
@@ -19,7 +20,7 @@
     <string name="date_description">\"As At: \"</string>
     <string name="as_at_annotation">"As at: %s "</string>
     <string name="search_for_transaction">Search for transaction</string>
-    <string name="password_must_contain_an_uppercase_and_number">Password must contain an Uppercase, and number</string>
+    <string name="password_must_contain_an_uppercase_and_number">Password should be a combination of letters, numbers, special characters, and at least 8 characters.</string>
     <string name="passwords_do_not_match">Passwords do not match</string>
     <string name="already_have_an_account">Already have an account ?</string>
 
@@ -41,6 +42,13 @@
         <item>M-PESA</item>
         <item>Direct Banking</item>
     </string-array>
+    <string-array name="visibility_options">
+        <item>Public</item>
+        <item>Private</item>
+        <item>Hybrid</item>
+    </string-array>
+
+    <string name="select_visibility_prompt">Select Post Visibility</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="notifications">Notifications</string>
@@ -62,4 +70,9 @@
     <string name="channel_name">sam_mwangi</string>
     <string name="channel_description">Bubbling Notification</string>
     <string name="balance">Balance: ___</string>
+
+    <string name="public_view_description">This account is currently set for public view as per your preferences. You can change this setting at any time in your account settings. [CHANGE PREFERENCES]</string>
+    <string name="password_policy_message">Password Policy: Should be a combination of letters, numbers, special characters, and at least 8 characters.</string>
+    <string name="custom_activity_expiry_text">This activity will be visible to all users of the app (the whole community)</string>
+
 </resources>

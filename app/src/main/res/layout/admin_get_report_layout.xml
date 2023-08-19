@@ -20,8 +20,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_margin="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
             android:text="@string/what_report_do_you_want"
             android:textColor="@color/white"
             android:textSize="20sp"
@@ -32,7 +34,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
-            android:layout_margin="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="16dp"
             android:background="@android:color/transparent"
             android:src="@drawable/baseline_close_28" />
 
@@ -51,6 +54,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
+                app:cornerRadius="8dp"
                 android:text="@string/pick_from_date" />
 
             <TextView
@@ -58,7 +62,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/get_reports_datePicker_from"
-                android:layout_margin="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="32dp"
                 android:textColor="@color/material_dynamic_neutral0"
                 android:textSize="18sp" />
 
@@ -67,8 +72,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
-                android:layout_margin="8dp"
-                android:text="@string/pick_to_date" />
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="@string/pick_to_date"
+                app:cornerRadius="8dp" />
 
             <TextView
                 android:id="@+id/date_to"
@@ -76,7 +85,8 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/get_reports_datePicker_to"
                 android:layout_alignParentEnd="true"
-                android:layout_margin="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
                 android:textColor="@color/material_dynamic_neutral0"
                 android:textSize="18sp" />
 
@@ -100,11 +110,14 @@
                 android:hint="@string/enter_a_name" />
 
             <EditText
-                android:id="@+id/subcounty_editext"
+                android:id="@+id/sub_county_editext"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/full_name_editext_getReports"
-                android:layout_margin="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
                 android:background="@drawable/edit_text_no_line"
                 android:hint="@string/enter_sub_county_name" />
 
@@ -112,9 +125,12 @@
                 android:id="@+id/get_specified_reports_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/subcounty_editext"
+                android:layout_below="@id/sub_county_editext"
                 android:layout_alignParentEnd="true"
-                android:layout_margin="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
                 android:text="@string/get_the_report" />
 
 

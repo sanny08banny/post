@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Preference
+        android:key="notifications"
+        app:iconSpaceReserved="false"
+        android:title="Notifications"/>
+
+    <SwitchPreferenceCompat
+        android:key="notifications_enabled"
+        android:title="Allow Notifications"
+        app:iconSpaceReserved="false"
+        android:summary="@string/customize_in_profile_amp_more"
+        android:defaultValue="true" />
+
+    <SwitchPreferenceCompat
+        android:key="bubbling_notifications_enabled"
+        android:title="Bubbling Notifications"
+        app:iconSpaceReserved="false"
+        android:summary="Enable Bubbling Notifications"
+        android:defaultValue="false" />
+    <Preference
+        android:key="privacy"
+        app:iconSpaceReserved="false"
+        android:title="Privacy"/>
+    <Preference
+        android:key="password"
+        android:icon="@drawable/baseline_vpn_key_32"
+        android:title="Password"
+        android:fragment="com.example."/>
+    <SwitchPreferenceCompat
+        android:key="saved_login_details"
+        android:icon="@drawable/baseline_data_saver_on_32"
+        android:title="Save login details"
+        android:defaultValue="true"/>
+    <Preference
+        android:key="about_account"
+        app:iconSpaceReserved="false"
+        android:title="About Your Account"/>
+</PreferenceScreen>
