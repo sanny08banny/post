@@ -1,6 +1,7 @@
 package com.example.sammwangi.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -73,9 +74,10 @@ public class ActivityListAdapter extends ArrayAdapter<ActivityItem> {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
                 switch (item.getItemId()) {
-                    case R.id.menu_item_edit:
+                    case R.id.menu_item_share:
                         // Handle the "Edit" menu option
                         // For example, show an edit dialog or navigate to an edit activity
+                        shareActivityItem(activityItem);
                         return true;
                     case R.id.menu_item_delete:
                         // Handle the "Delete" menu option
@@ -90,7 +92,17 @@ public class ActivityListAdapter extends ArrayAdapter<ActivityItem> {
 
         popupMenu.show();
     }
-
+    private void shareActivityItem(ActivityItem activityItem) {
+        if (activityItem != null) {
+            Intent shareIntent = new Intent(Intent.ACTION_SEND);
+            shareIntent.setType("text/plain");
+            String shareText = activityItem.getTitle() + "\n\n"
+                    + activityItem.getDescription() + "\n\n"
+                    + "Timestamp: " + activityItem.getTimestamp();
+            shareIntent.putExtra(Intent.EXTRA_TEXT, shareText);
+            context.startActivity(Intent.createChooser(shareIntent, "Share via"));
+        }
+    }
     public void setItems(List<ActivityItem> data) {
         activityList.clear();
         activityList.addAll(data);

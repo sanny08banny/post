@@ -119,12 +119,18 @@
         </activity>
         <activity
             android:name=".activities.MainActivity"
-            android:exported="false"
+            android:exported="true"
             android:parentActivityName=".activities.LoginActivity"
             android:theme="@style/Theme.SamMwangiCustom">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="post" android:host="mainactivity" />
+            </intent-filter>
         </activity>
 
         <service
